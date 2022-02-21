@@ -2,11 +2,11 @@
 
 (Py)thon (Pa)ssword(le)ss Tokens.
 
-```
+```sh
 pip install pypale
 ```
 
-## usage
+## Usage
 
 ```py
 from pypale import Pypale
@@ -27,7 +27,7 @@ token = pypale.generate_token(email)
 assert pypale.valid_token(token, email)
 ```
 
-## an example with sendgrid
+## An example with SendGrid
 
 ```py
 # send an email with a magic login link to "jane.doe@example.com"

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pypale"
+authors = [{name = "Anthony Corletti", email = "anthcor@gmail.com"}]
+dynamic = ["version", "description"]
+requires-python = ">=3.9.10"
+dependencies = [
+    "PyJWT>=2.3.0,<3.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.2.5",
+    "mypy>=0.910",
+    "coverage>=6.1.1",
+    "pytest-cov>=3.0.0",
+]
+dev = [
+    "flake8>=3.9.2",
+    "black>=21.10b0",
+    "isort>=5.9.3",
+    "autoflake>=1.4",
+    "flake8-docstrings>=1.6.0",
+]
+
+[tool.isort]
+profile = "black"
+
+[project.urls]
+Documentation = "https://www.github.com/anthonycorletti/pypale"
