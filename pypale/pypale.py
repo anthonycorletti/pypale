@@ -1,4 +1,5 @@
 import base64
+import binascii
 import logging
 import random
 import string
@@ -53,7 +54,10 @@ class Pypale:
     def valid_token(self, return_token: str = None, return_email: str = None) -> bool:
         if return_token is None:
             raise ValueError("return_token was not specified")
-        decoded_return_token = base64.b64decode(return_token).decode(self.ENCODING)
+        try:
+            decoded_return_token = base64.b64decode(return_token).decode(self.ENCODING)
+        except binascii.Error as e:
+            raise ValueError(str(e))
         token_metadata = jwt.decode(
             decoded_return_token, self.secret_key, algorithms=[self.JWT_ALGORITHM]
         )

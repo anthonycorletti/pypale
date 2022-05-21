@@ -43,3 +43,13 @@ def test_pypale_invalid_token_no_return_token(
     email = test_email(name="user")
     with pytest.raises(ValueError):
         _example_dot_com_1s_token.valid_token(return_token=None, return_email=email)
+
+
+def test_pypale_invalid_token_binascii(
+    _example_dot_com_1s_token: Pypale,
+) -> None:
+    email = test_email(name="user")
+    with pytest.raises(ValueError):
+        _example_dot_com_1s_token.valid_token(
+            return_token="notvalidmultipleof4", return_email=email
+        )
