@@ -8,7 +8,7 @@ authors = [{name = "Anthony Corletti", email = "anthcor@gmail.com"}]
 dynamic = ["version", "description"]
 requires-python = ">=3.9.10"
 dependencies = [
-    "PyJWT>=2.3.0,<3.0.0"
+    "PyJWT>=2.4.0,<3.0.0"
 ]
 
 [project.optional-dependencies]
