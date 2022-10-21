@@ -39,7 +39,6 @@ class Pypale:
             key=self.secret_key,
             algorithm=self.jwt_algorithm,
         )
-        print(response)
         return response
 
     def generate_token_metadata(
