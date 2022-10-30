@@ -1,10 +1,9 @@
 import random
 import string
 import time
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import jwt
-from black import Any
 
 
 class Pypale:
